@@ -1,11 +1,11 @@
-#N canvas 555 164 496 628 12;
+#N canvas 553 53 963 615 12;
 #X obj 31 383 one_sample_osc, f 20;
 #X obj 31 527 *~ 0;
 #X obj 84 527 *~ 0;
 #X obj 31 560 dac~ 1 2;
-#X obj 298 458 hsl 128 15 0 1 0 0 empty empty OUTPUT-Volume -2 -8 0
+#X obj 328 458 hsl 128 15 0 1 0 0 empty empty OUTPUT-Volume -2 -8 0
 10 -228856 -1 -1 12700 1;
-#N canvas 951 503 450 486 sound-source 0;
+#N canvas 951 503 481 486 sound-source 0;
 #X obj 203 178 adc~ 1 2;
 #N canvas 0 23 643 300 input-selector 0;
 #X obj 47 87 inlet~;
@@ -98,19 +98,27 @@ empty 0 -8 0 10 -228856 -1 -1 0;
 #X connect 6 0 7 0;
 #X coords 0 -1 1 1 260 120 2 10 10;
 #X restore 31 17 pd sound-source;
-#X obj 298 154 hsl 128 15 0 1 0 0 empty empty INPUT-Volume -2 -8 0
-10 -228856 -1 -1 12200 1;
-#X obj 298 191 hsl 128 15 1 20 0 0 empty empty INPUT-Gain -2 -8 0 10
+#X obj 328 174 hsl 128 15 0 1 0 0 empty empty INPUT-Volume -2 -8 0
+10 -228856 -1 -1 7600 1;
+#X obj 328 211 hsl 128 15 1 20 0 0 empty empty INPUT-Gain -2 -8 0 10
 -228856 -1 -1 0 1;
-#X obj 298 231 hsl 128 15 0 1 0 0 empty empty MIX-Dry-Wet -2 -8 0 10
--228856 -1 -1 12700 1;
-#X obj 298 271 hsl 128 15 0 12 0 0 empty empty WRITE-Block-Size -2
--8 0 10 -228856 -1 -1 0 1;
-#X floatatom 295 303 5 0 10000 1 PLAYBACK-Frequency - -;
-#X obj 295 357 * 1;
-#X msg 330 338 1, f 1;
-#X msg 350 338 10, f 2;
-#X msg 375 338 100;
+#X obj 328 251 hsl 128 15 0 1 0 0 empty empty MIX-Dry-Wet -2 -8 0 10
+-228856 -1 -1 6700 1;
+#X obj 328 291 hsl 128 15 0 12 0 0 empty empty WRITE-Block-Size -2
+-8 0 10 -228856 -1 -1 7200 1;
+#X floatatom 325 328 5 0 10000 1 PLAYBACK-Frequency - -;
+#X obj 325 17 loadbang;
+#X msg 325 41 \; pd dsp 1;
+#X text 505 87 1 Press PLAY \, load a soundfile or activate the internal
+microphone of your device;
+#X text 505 207 3 Turn up gain if necessary (1-20);
+#X text 505 247 4 Dry/Wet mix (0-1);
+#X text 505 287 5 Writing block size (0-12 pow2 so: 1 \, 2 \, 4 \,
+8 \, 16 \, etc.);
+#X text 505 327 6 Set playback frequency (Hz) (absolute values \, init
+200);
+#X text 505 167 2 Set input volume (0-1);
+#X text 505 457 7 Turn up output volume (0-1);
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 1 0 3 0;
@@ -123,8 +131,5 @@ empty 0 -8 0 10 -228856 -1 -1 0;
 #X connect 7 0 0 3;
 #X connect 8 0 0 4;
 #X connect 9 0 0 5;
-#X connect 10 0 11 0;
-#X connect 11 0 0 6;
-#X connect 12 0 11 1;
-#X connect 13 0 11 1;
-#X connect 14 0 11 1;
+#X connect 10 0 0 6;
+#X connect 11 0 12 0;
