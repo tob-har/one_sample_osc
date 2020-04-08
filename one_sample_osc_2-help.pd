@@ -1,0 +1,155 @@
+#N canvas 194 275 1011 608 10;
+#X obj 31 527 *~ 0;
+#X obj 84 527 *~ 0;
+#X obj 31 560 dac~ 1 2;
+#X obj 328 458 hsl 128 15 0 1 0 0 empty empty OUTPUT-Volume -2 -8 0
+10 -228856 -1 -1 0 1;
+#N canvas 951 503 481 486 sound-source 0;
+#X obj 203 178 adc~ 1 2;
+#N canvas 0 23 643 300 input-selector 0;
+#X obj 47 87 inlet~;
+#X obj 179 87 inlet~;
+#X obj 47 198 outlet~;
+#X obj 311 127 vline~;
+#X obj 179 133 -~;
+#X obj 179 158 *~;
+#X obj 107 87 inlet~;
+#X obj 241 87 inlet~;
+#X obj 241 133 -~;
+#X obj 241 159 *~;
+#X obj 107 198 outlet~;
+#X obj 311 67 r \$0-s-input-selector-example;
+#X connect 0 0 4 1;
+#X connect 0 0 2 0;
+#X connect 1 0 4 0;
+#X connect 3 0 5 1;
+#X connect 3 0 9 1;
+#X connect 4 0 5 0;
+#X connect 5 0 2 0;
+#X connect 6 0 8 1;
+#X connect 6 0 10 0;
+#X connect 7 0 8 0;
+#X connect 8 0 9 0;
+#X connect 9 0 10 0;
+#X connect 11 0 3 0;
+#X restore 33 228 pd input-selector;
+#N canvas 941 334 450 491 audiofile-playback 0;
+#X obj 107 136 openpanel;
+#X msg 107 160 set open \$1;
+#X msg 15 304 1, f 1;
+#X msg 137 301 0, f 1;
+#X obj 15 271 t b b;
+#X obj 202 132 loadbang;
+#X obj 15 246 r \$0-s-play;
+#X obj 137 273 r \$0-s-stop;
+#X obj 212 160 r \$0-s-load-example-sf;
+#X obj 107 106 r \$0-s-open-soundfile;
+#X obj 107 389 outlet~;
+#X obj 177 389 outlet~;
+#X obj 107 332 readsf~ 2;
+#X msg 107 221 open audio/amenbreak.wav;
+#X msg 202 190 set open audio/amenbreak.wav;
+#X connect 0 0 1 0;
+#X connect 1 0 13 0;
+#X connect 2 0 12 0;
+#X connect 3 0 12 0;
+#X connect 4 0 2 0;
+#X connect 4 1 13 0;
+#X connect 5 0 14 0;
+#X connect 6 0 4 0;
+#X connect 7 0 3 0;
+#X connect 8 0 14 0;
+#X connect 9 0 0 0;
+#X connect 12 0 10 0;
+#X connect 12 1 11 0;
+#X connect 12 2 4 0;
+#X connect 13 0 12 0;
+#X connect 14 0 13 0;
+#X restore 33 178 pd audiofile-playback;
+#X obj 33 302 outlet~;
+#X obj 149 302 outlet~;
+#X obj 244 297 env~;
+#X obj 244 321 - 100;
+#X obj 243 345 s \$0-input-monitor-example;
+#X obj 16 88 bng 15 250 50 0 \$0-s-play \$0-r-play PLAY 17 7 0 10 -204786
+-1 -1;
+#X obj 16 108 bng 15 250 50 0 \$0-s-stop \$0-r-stop STOP 17 7 0 10
+-261682 -1 -1;
+#X obj 65 88 bng 15 250 50 0 \$0-s-load-example-sf \$0-r-load-example-sf
+Load_Example_Soundfile 17 7 0 10 -228856 -1 -1;
+#X obj 65 108 bng 15 250 50 0 \$0-s-open-soundfile \$0-r-open-soundfile
+Open_Soundfile 17 7 0 10 -228856 -1 -1;
+#X obj 16 48 vradio 15 1 0 2 \$0-s-input-selector-example \$0-r-input-selector-example
+empty 0 -8 0 10 -228856 -1 -1 0;
+#X text 35 60 Microphone;
+#X text 35 44 Play Soundfile;
+#X obj 244 42 vu 15 80 \$0-input-monitor-example empty -1 -8 0 10 -99865
+-1 0 0;
+#X connect 0 0 1 2;
+#X connect 0 1 1 3;
+#X connect 1 0 3 0;
+#X connect 1 0 5 0;
+#X connect 1 1 4 0;
+#X connect 1 1 5 0;
+#X connect 2 0 1 0;
+#X connect 2 1 1 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X coords 0 -1 1 1 260 120 2 10 10;
+#X restore 31 17 pd sound-source;
+#X obj 328 174 hsl 128 15 0 1 0 0 empty empty INPUT-Volume -2 -8 0
+10 -228856 -1 -1 0 1;
+#X obj 328 211 hsl 128 15 1 20 0 0 empty empty INPUT-Gain -2 -8 0 10
+-228856 -1 -1 0 1;
+#X obj 328 251 hsl 128 15 0 1 0 0 empty empty MIX-Dry-Wet -2 -8 0 10
+-228856 -1 -1 0 1;
+#X floatatom 325 358 5 0 10000 1 PLAYBACK-Frequency - -;
+#X obj 925 17 loadbang;
+#X msg 925 41 \; pd dsp 1;
+#X obj 31 423 one_sample_osc_2, f 20;
+#X obj 328 291 hsl 128 15 0 3 0 0 empty empty WRITE_Speed -2 -8 0 10
+-228856 -1 -1 0 1;
+#X msg 368 310 1, f 1;
+#X msg 388 310 10, f 2;
+#N canvas 383 223 450 300 title 0;
+#X obj 10 10 cnv 15 200 60 empty empty one_sample_osc_2 6 12 0 14 -228856
+-45076 0;
+#X text 182 43 2020;
+#X text 176 56 V 0.1;
+#X coords 0 -1 1 1 200 60 2 10 10;
+#X restore 505 17 pd title;
+#X text 505 107 1 Press PLAY \, load a soundfile or activate the internal
+microphone of your device;
+#X text 505 207 3 Turn up gain if necessary (1-20);
+#X text 505 247 4 Dry/Wet mix (0-1);
+#X text 505 357 6 Set playback frequency (Hz) (absolute values \, init
+200);
+#X text 505 167 2 Set input volume (0-1);
+#X text 505 457 7 Turn up output volume (0-1);
+#X obj 325 326 / 1;
+#X text 505 287 5 Set 1 sample buffer write speed (0-3 milliseconds)
+;
+#X text 525 307 Set devider to 10 for value range 0 - 0.3 milliseconds
+;
+#X text 525 327 You can send different speeds to each buffer.;
+#X text 525 377 You can send different frequencies to each oscillator.
+;
+#X connect 0 0 2 0;
+#X connect 1 0 2 1;
+#X connect 3 0 1 1;
+#X connect 3 0 0 1;
+#X connect 4 0 11 0;
+#X connect 4 1 11 1;
+#X connect 5 0 11 2;
+#X connect 6 0 11 3;
+#X connect 7 0 11 4;
+#X connect 8 0 11 7;
+#X connect 8 0 11 8;
+#X connect 9 0 10 0;
+#X connect 11 0 0 0;
+#X connect 11 1 1 0;
+#X connect 12 0 22 0;
+#X connect 13 0 22 1;
+#X connect 14 0 22 1;
+#X connect 22 0 11 5;
+#X connect 22 0 11 6;
