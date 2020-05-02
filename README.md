@@ -33,16 +33,16 @@ There is a siginficant difference in the signal processing of the abstractions:
 
 ### About the help files and how to get started
 
-Dowload either 
-
+Download the release linked above.
+Extract the .zip file. 
+Place the Pure Data vanilla abstractions [one_sample_osc_1] and [one_sample_osc_2] in a new Pure Data patcher.
+Open help file to get furhter informations and to explore the most basic features.
+The folder [audio] contains the examples sound file (amen break 44.1 kHz) but you can load your own or use reatime input.
 
 
 ### Versions
 
-- Initial Release V 0.1 (02.05.2020)
-
-
-
+- [Initial Release V 0.1 (02.05.2020)](https://github.com/tob-har/1_Sample_Processor/releases)
 
 
 Feel free to inplement the abstractions according to your needs or however you want to use ist.
@@ -57,7 +57,7 @@ Enjoy!
 
 
 
-
+---
 
 
 Published under MIT License
