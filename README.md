@@ -1,5 +1,7 @@
 # one_sample_osc
 
+
+
 The Pure Data abstractions [one_sample_osc_1] and [one_sample_osc_2] are two different approaches one the same concept:
 
 Processing an audio stream of two channels on a one sample accurate level, whereby the audio stream is read out sample by sample and one can interfere the speed or timing, at which those samples are written consecutively into a wavetable of two oscillators for instant playback at a given frequency. 
@@ -8,7 +10,7 @@ The unusual and non accureate timing caused by this kind of signal processing, r
 
 
 
-### About the abstractions
+### About the abstractions 
 
 [one_sample_osc_1] and [one_sample_osc_2] are both Pure Data vanilla abstractions. 
 Pure Data 0.50 or later is necessary. Pure Data 0.50.2 recommended.
@@ -26,6 +28,20 @@ There is a siginficant difference in the signal processing of the abstractions:
 
 - [one_sample_osc_1] basically sends the incoming audio at a fixed given blocksize to a wavetable, that is read out by an [tabosc4~] oscillator instantly. The initial blocksize for sending the incoming audio stream is 1 sample, and the oscillaor subpatch is always reblocked to 1 sample blocksize (and 8 times oversampling). You can change the writing block size ins steps at power of 2 (1, 2, 4, 8, 16, … ) Changing the reblocking blocksize of the osciallator subpatch can be done, but this is likely to cause crashing the whole patch. 
 - [one_sample_osc_2] as based around [fexpr~]. The incoming audio stream feeds a buffer wavetable of the size of 1 sample. You can controll the speed in milliseconds at which this one-sample-buffer is read out and written consecutivly into the 512 samples large oscillator wavetable for instant playback. The range is by default 0-3 milliseconds interval for writing each sample. In the help file a basic division by 10 lets you access the range 0-0.3 millisenconds.
+
+
+
+### About the help files and how to get started
+
+Dowload either 
+
+
+
+### Versions
+
+- Initial Release V 0.1 (02.05.2020)
+
+
 
 
 
