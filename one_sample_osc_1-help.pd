@@ -1,4 +1,4 @@
-#N canvas 109 101 1008 615 10;
+#N canvas 18 261 1016 615 10;
 #X obj 31 527 *~ 0;
 #X obj 84 527 *~ 0;
 #X obj 31 560 dac~ 1 2;
@@ -106,10 +106,6 @@ empty 0 -8 0 10 -228856 -1 -1 0;
 #X obj 328 291 hsl 128 15 0 12 0 0 empty empty WRITE-Block-Size -2
 -8 0 10 -228856 -1 -1 0 1;
 #X floatatom 325 328 5 0 10000 1 PLAYBACK-Frequency - -;
-#X obj 915 17 loadbang;
-#X msg 915 41 \; pd dsp 1;
-#X text 505 107 1 Press PLAY \, load a soundfile or activate the internal
-microphone of your device;
 #X text 505 207 3 Turn up gain if necessary (1-20);
 #X text 505 247 4 Dry/Wet mix (0-1);
 #X text 505 287 5 Writing block size (0-12 pow2 so: 1 \, 2 \, 4 \,
@@ -122,22 +118,50 @@ microphone of your device;
 #N canvas 383 223 450 300 title 0;
 #X obj 10 10 cnv 15 200 60 empty empty one_sample_osc_1 6 12 0 14 -228856
 -45076 0;
-#X text 182 43 2020;
-#X text 176 56 V 0.1;
+#X text 182 30 2020;
+#X text 176 43 V 0.1;
+#X text 116 56 Tobias Hartmann;
 #X coords 0 -1 1 1 200 60 2 10 10;
 #X restore 505 17 pd title;
+#X text 505 107 1 Press PLAY \, load a soundfile or activate the internal
+microphone of your device (example soundfile is 44100 Hz samplerate)
+;
+#X obj 913 4 loadbang;
+#X msg 925 26 \; pd dsp 1;
+#X obj 913 60 samplerate~;
+#X floatatom 913 81 6 0 0 0 - - -;
+#N canvas 0 23 436 346 MIT 0;
+#X text 19 25 Copyright 2020 Tobias Hartmann Permission is hereby granted
+\, free of charge \, to any person obtaining a copy of this software
+and associated documentation files (the "Software") \, to deal in the
+Software without restriction \, including without limitation the rights
+to use \, copy \, modify \, merge \, publish \, distribute \, sublicense
+\, and/or sell copies of the Software \, and to permit persons to whom
+the Software is furnished to do so \, subject to the following conditions:
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software. THE SOFTWARE
+IS PROVIDED "AS IS" \, WITHOUT WARRANTY OF ANY KIND \, EXPRESS OR IMPLIED
+\, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY \,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM \, DAMAGES
+OR OTHER LIABILITY \, WHETHER IN AN ACTION OF CONTRACT \, TORT OR OTHERWISE
+\, ARISING FROM \, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
+USE OR OTHER DEALINGS IN THE SOFTWARE.;
+#X restore 913 101 pd MIT license;
 #X connect 0 0 2 0;
 #X connect 1 0 2 1;
 #X connect 3 0 1 1;
 #X connect 3 0 0 1;
-#X connect 4 0 19 0;
-#X connect 4 1 19 1;
-#X connect 5 0 19 2;
-#X connect 6 0 19 3;
-#X connect 7 0 19 4;
-#X connect 8 0 19 5;
-#X connect 9 0 19 6;
-#X connect 9 0 19 7;
-#X connect 10 0 11 0;
-#X connect 19 0 0 0;
-#X connect 19 1 1 0;
+#X connect 4 0 16 0;
+#X connect 4 1 16 1;
+#X connect 5 0 16 2;
+#X connect 6 0 16 3;
+#X connect 7 0 16 4;
+#X connect 8 0 16 5;
+#X connect 9 0 16 6;
+#X connect 9 0 16 7;
+#X connect 16 0 0 0;
+#X connect 16 1 1 0;
+#X connect 19 0 20 0;
+#X connect 19 0 21 0;
+#X connect 21 0 22 0;
