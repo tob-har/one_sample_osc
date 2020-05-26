@@ -4,16 +4,18 @@
 
 The Pure Data abstractions [one_sample_osc_1] and [one_sample_osc_2] are two different approaches one the same concept:
 
-Processing an audio stream of two channels on a one sample accurate level, whereby the audio stream is read out sample by sample and one can interfere the speed or timing, at which those samples are written consecutively into wavetables of two oscillators for instant playback at a given frequency. 
+Processing a stereo audio input signal on a one sample accurate level.
+The input audio signal is read out sample by sample. It is possible to interfere with the speed or timing, at which those samples are written consecutively into wavetables of two oscillators for instant playback at a given frequency. 
 
-The unusual and non accureate timing caused by this kind of signal processing results in a great variety of sounds during playback. Due to the sample accurate processing the output is always related to and depended on the audio input. Feel free to experiment with variouse settings and don’t forget to especially explore extreme small and large values.
+The unusual and non accurate timing caused by this kind of signal processing results in a great variety of sounds. Due to the sample accurate processing, the output signal is always related to (and depending on) the audio input signal. 
+Feel free to experiment with different settings and don’t forget to especially explore extreme small and large values.
 
 
 ### About the abstractions 
 
 [one_sample_osc_1] and [one_sample_osc_2] are both Pure Data vanilla abstractions. 
 Pure Data 0.50 or later is necessary. Pure Data 0.50.2 recommended.
-The abstracionts are documented in the corresponding help files and all inlets and outlets are also labelled and described within the abstraction.
+The abstracionts are documented in the corresponding help files and all inlets and outlets are labelled and described within the abstraction.
 
 Both abstractions feature control over:
 
@@ -34,8 +36,8 @@ There is a siginficant difference in the signal processing of the abstractions:
 
 Download the release linked above.
 Extract the .zip file. 
-Place the Pure Data vanilla abstractions [one_sample_osc_1] and [one_sample_osc_2] in a new Pure Data patcher.
-Open help file to get furhter informations and to explore the most basic features.
+Put the Pure Data vanilla abstractions [one_sample_osc_1] and [one_sample_osc_2] in a new Pure Data patcher.
+Open help file to get furhter informations and to explore the most basic features with a demo sample.
 The folder [audio] contains the examples sound file (amen break 44.1 kHz) but you can load your own or use reatime input.
 
 
