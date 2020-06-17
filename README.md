@@ -20,7 +20,7 @@ Feel free to experiment with different settings and don’t forget to especially
 To install the VST plugins unzip the downloaded archive and put the extracted folder tob-har into your VST plugin directory.
 (On MAC you find it here: /Library/Audio/Plug-Ins/VST)
 
-The open the DAW of your choice and find your plugins under VST/tob-har/
+Then open the DAW of your choice and find your plugins under VST/tob-har/
 
 The Plugins are made possible thanks to Camomile by Pierre Guillot:
 
