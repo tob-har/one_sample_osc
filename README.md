@@ -6,10 +6,13 @@ Pure Data Abstractions and VST Plugins
 
 [Download the Release here.](https://github.com/tob-har/1_Sample_Processor/releases)
 
-![One Sample OSC 1](https://github.com/tob-har/one_sample_osc/blob/master/plugin_dev/One_Sample_OSC_1/oso1_screenshot.png "One Sample OSC 1")
-![One Sample OSC 2](https://github.com/tob-har/one_sample_osc/blob/master/plugin_dev/One_Sample_OSC_2/oso2_screenshot.png "One Sample OSC 2")
 
-<img src="https://github.com/tob-har/one_sample_osc/blob/master/plugin_dev/One_Sample_OSC_1/oso1_screenshot.png" alt="YOne Sample OSC 1" width="250"/>
+
+<img src="https://github.com/tob-har/one_sample_osc/blob/master/plugin_dev/One_Sample_OSC_1/oso1_screenshot.png" alt="YOne Sample OSC 1" width="500"/>
+<img src="https://github.com/tob-har/one_sample_osc/blob/master/plugin_dev/One_Sample_OSC_2/oso2_screenshot.png" alt="YOne Sample OSC 2" width="500"/>
+
+
+
 
 **One Sample OSC 1** and **One Sample OSC 2** are two different approaches one the same concept:
 
