@@ -1,6 +1,8 @@
 # One Sample OSC 1 and One Sample OSC 2
+
 Version 0.1.1
-Pure Data Abstractions and VST Plugins
+
+Pure Data Abstractions and VST Plugins 
 
 [Download the Release here.](https://github.com/tob-har/1_Sample_Processor/releases)
 
