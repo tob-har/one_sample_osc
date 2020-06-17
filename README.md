@@ -1,6 +1,6 @@
 # One Sample OSC 1 and One Sample OSC 2
 Version 0.1.1
-Pure Data Abstractions and VST Plugin
+Pure Data Abstractions and VST Plugins
 
 [Download the Release here.](https://github.com/tob-har/1_Sample_Processor/releases)
 
@@ -20,7 +20,8 @@ To install the VST plugins unzip the downloaded archive and put the extracted fo
 
 The open the DAW of your choice and find your plugins under VST/tob-har/
 
-The Plugins are made possible thanks to Camomile by Pierre Guillot
+The Plugins are made possible thanks to Camomile by Pierre Guillot:
+
 https://github.com/pierreguillot/Camomile
 
 
