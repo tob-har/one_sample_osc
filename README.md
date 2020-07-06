@@ -5,7 +5,9 @@ Version 0.1.1
 Pure Data Abstractions and VST Plugins 
 
 [Download the Release here.](https://github.com/tob-har/1_Sample_Processor/releases)
+
 [Have a look/listen here](https://youtu.be/Gmqx0_3zaCM)
+
 [... and here.](https://youtu.be/PEX9j8iqWEo)
 
 
