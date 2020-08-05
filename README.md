@@ -4,11 +4,11 @@ Version 0.1.1
 
 Pure Data Abstractions and VST Plugins 
 
-[Download the Release here.](https://github.com/tob-har/1_Sample_Processor/releases)
+[Download the Release here.](https://github.com/tob-har/1_Sample_Processor/releases)<br>
+[Have a look/listen here](https://youtu.be/Gmqx0_3zaCM)<br>
+[... and here.](https://youtu.be/PEX9j8iqWEo)<br>
+[Talk about the project at ZKM next_generation 8.0(https://zkm.de/en/media/video/tobias-hartmann-000002083-seconds)]
 
-[Have a look/listen here](https://youtu.be/Gmqx0_3zaCM)
-
-[... and here.](https://youtu.be/PEX9j8iqWEo)
 
 
 
@@ -23,7 +23,7 @@ Pure Data Abstractions and VST Plugins
 Processing a stereo audio input signal on a one sample accurate level.
 The input audio signal is read out sample by sample. It is possible to interfere with the speed or timing, at which those samples are written consecutively into wavetables of two oscillators for instant playback at a given frequency. 
 
-The unusual and non accurate timing caused by this kind of signal processing results in a great variety of sounds. Due to the sample accurate processing, the output signal is always related to (and depending on) the audio input signal. 
+The unusual and non-accurate timing caused by this kind of signal processing results in a great variety of sounds. Due to the sample accurate processing, the output signal is always related to (and depending on) the audio input signal. 
 Feel free to experiment with different settings and don’t forget to especially explore extreme small and large values.
 
 
@@ -41,9 +41,9 @@ https://github.com/pierreguillot/Camomile
 
 ### About the abstractions 
 
-[one_sample_osc_1] and [one_sample_osc_2] are both Pure Data vanilla abstractions. 
+[one_sample_osc_1] and [one_sample_osc_2] are both Pure Data Vanilla abstractions. 
 Pure Data 0.50 or later is necessary. Pure Data 0.50.2 recommended.
-The abstracionts are documented in the corresponding help files and all inlets and outlets are labelled and described within the abstraction.
+The abstracionts are documented in the corresponding help files and all inlets and outlets are labeled and described within the abstraction.
 
 Both abstractions feature control over:
 
@@ -55,10 +55,10 @@ Both abstractions feature control over:
 
 There is a siginficant difference in the signal processing of the abstractions:
 
-- [one_sample_osc_1] basically sends the incoming audio at a fixed given blocksize to a wavetable, that is read out by an [tabosc4~] oscillator instantly. The initial blocksize for sending the incoming audio stream is 1 sample, and the oscillaor subpatch is always reblocked to 1 sample blocksize (and 8 times oversampling). You can change the writing block size ins steps at power of 2 (1, 2, 4, 8, 16, … ) Changing the reblocking blocksize of the osciallator subpatch can be done, but this is likely to cause crashing the whole patch. 
+- [one_sample_osc_1] basically sends the incoming audio at a fixed given blocksize to a wavetable, that is read out by an [tabosc4~] oscillator instantly. The initial blocksize for sending the incoming audio stream is 1 sample, and the oscillaor subpatch is always reblocked to 1 sample blocksize (and 8 times oversampling). You can change the writing block size in steps at power of 2 (1, 2, 4, 8, 16, … ) Changing the reblocking blocksize of the osciallator subpatch can be done, but this is likely to cause crashing the whole patch. 
 - [one_sample_osc_2] as based around [fexpr~]. The incoming audio stream feeds a buffer wavetable of the size of 1 sample. You can controll the speed in milliseconds at which this one-sample-buffer is read out and written consecutively into the 512 samples large oscillator wavetable for instant playback. The range is by default 0-3 milliseconds interval for writing each sample. In the help file a basic division by 10 lets you access the range 0-0.3 milliseconds.
 
-Feel free to inplement the abstractions according to your needs or however you want to use ist.
+Feel free to inplement the abstractions according to your needs or however you want to use it.
 It is also possible to extend them for processing more audio channels, or to put an offset at one of the audio write speed or playback frequency for instant audible stereo effects. 
 
 
