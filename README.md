@@ -4,7 +4,7 @@ Version 0.1.1
 
 Pure Data Abstractions and VST Plugins 
 
-[Download the Release here.](https://github.com/tob-har/1_Sample_Processor/releases)<br>
+[Download the latest Release here.](https://github.com/tob-har/1_Sample_Processor/releases)<br>
 [Have a look/listen here](https://youtu.be/Gmqx0_3zaCM)<br>
 [... and here.](https://youtu.be/PEX9j8iqWEo)<br>
 [Talk about the project at ZKM next_generation 8.0](https://zkm.de/en/media/video/tobias-hartmann-000002083-seconds)
@@ -27,14 +27,14 @@ The unusual and non-accurate timing caused by this kind of signal processing res
 Feel free to experiment with different settings and don’t forget to especially explore extreme small and large values.
 
 
-### About the VST plugins
+### About the plugins
 
-To install the VST plugins unzip the downloaded archive and put the extracted folder tob-har into your VST plugin directory.
-(On MAC you find it here: /Library/Audio/Plug-Ins/VST)
+To install the VST3 and Audio Unit plugins unzip the downloaded archive and put the extracted Files into your VST3 and Audio Unit plugin directory.
+(On MAC you find it here: /Library/Audio/Plug-Ins/VST3 and /Library/Audio/Plug-Ins/components)
 
-Then open the DAW of your choice and find your plugins under VST/tob-har/
+Then open the DAW of your choice and find your plugins under VST3/Tobias Hartmann/ or AU/Tobias Hartmann/
 
-The Plugins are made possible thanks to Camomile by Pierre Guillot:
+The plugins are made possible thanks to Camomile by Pierre Guillot:
 
 https://github.com/pierreguillot/Camomile
 
@@ -62,9 +62,9 @@ Feel free to inplement the abstractions according to your needs or however you w
 It is also possible to extend them for processing more audio channels, or to put an offset at one of the audio write speed or playback frequency for instant audible stereo effects. 
 
 
-### About the help files and how to get started
+### About the help files and how to get started in Pure Data
 
-Download the release linked above.
+Download the release V. 0.1.1 linked above.
 Extract the .zip file. 
 Put the Pure Data vanilla abstractions [one_sample_osc_1] and [one_sample_osc_2] in a new Pure Data patcher.
 Open help file to get furhter informations and to explore the most basic features with a demo sample.
