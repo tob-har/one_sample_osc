@@ -22,26 +22,26 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.;
 #X obj 33 27 hsl 100 15 0 20 0 0 \$0-s-in-gain \$0-r-in-gain empty
 -2 -8 0 10 -228856 -1 -1 0 1;
 #X text 202 26 In Gain;
-#X obj 33 84 hsl 100 15 0 1 0 0 \$0-s-dry-wet \$0-r-dry-wet empty -2
+#X obj 33 46 hsl 100 15 0 1 0 0 \$0-s-dry-wet \$0-r-dry-wet empty -2
 -8 0 10 -228856 -1 -1 0 1;
-#X text 202 84 Dry/Wet Mix;
-#X obj 33 123 hsl 100 15 0 3 0 0 \$0-s-l-write-speed \$0-r-l-write-speed
+#X text 202 46 Dry/Wet Mix;
+#X obj 33 122 hsl 100 15 0 3 0 0 \$0-s-l-write-speed \$0-r-l-write-speed
 empty -2 -8 0 10 -191407 -1 -1 0 1;
-#X obj 33 142 hsl 100 15 0 20000 0 0 \$0-s-l-osc-freq \$0-r-l-osc-freq
+#X obj 33 141 hsl 100 15 0 20000 0 0 \$0-s-l-osc-freq \$0-r-l-osc-freq
 empty -2 -8 0 10 -191407 -1 -1 0 1;
-#X obj 216 142 hsl 100 15 0 20000 0 0 \$0-s-r-osc-freq \$0-r-r-osc-freq
+#X obj 216 141 hsl 100 15 0 20000 0 0 \$0-s-r-osc-freq \$0-r-r-osc-freq
 empty -2 -8 0 10 -195568 -1 -1 0 1;
 #X obj 138 8 nbx 5 15 0 1 0 0 empty \$0-r-in-vol empty 0 -8 0 10 -228856
 -1 -1 0 256;
 #X obj 138 27 nbx 5 15 0 20 0 0 empty \$0-r-in-gain empty 0 -8 0 10
 -228856 -1 -1 0 256;
-#X obj 138 84 nbx 5 15 0 1 0 0 empty \$0-r-dry-wet empty 0 -8 0 10
+#X obj 138 46 nbx 5 15 0 1 0 0 empty \$0-r-dry-wet empty 0 -8 0 10
 -228856 -1 -1 0 256;
-#X obj 138 123 nbx 5 15 0 3 0 0 empty \$0-r-l-write-speed empty 0 -8
+#X obj 138 122 nbx 5 15 0 3 0 0 empty \$0-r-l-write-speed empty 0 -8
 0 10 -191407 -1 -1 0 256;
-#X obj 138 142 nbx 5 15 0 20000 0 0 empty \$0-r-l-osc-freq empty 0
+#X obj 138 141 nbx 5 15 0 20000 0 0 empty \$0-r-l-osc-freq empty 0
 -8 0 10 -195568 -1 -1 0 256;
-#X obj 321 142 nbx 5 15 0 20000 0 0 empty \$0-r-r-osc-freq empty 0
+#X obj 321 141 nbx 5 15 0 20000 0 0 empty \$0-r-r-osc-freq empty 0
 -8 0 10 -195568 -1 -1 0 256;
 #N canvas 0 23 142 116 (subpatch) 0;
 #X obj 16 10 inlet;
@@ -84,9 +84,9 @@ empty -2 -8 0 10 -195568 -1 -1 0 1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 213 175 pd;
-#X obj 33 46 hsl 100 15 0 5000 0 0 \$0-s-in-hip \$0-r-in-hip empty
+#X obj 33 65 hsl 100 15 0 5000 0 0 \$0-s-in-hip \$0-r-in-hip empty
 -2 -8 0 10 -228856 -1 -1 0 1;
-#X obj 138 46 nbx 5 15 0 5000 0 0 empty \$0-r-in-hip empty 0 -8 0 10
+#X obj 138 65 nbx 5 15 0 5000 0 0 empty \$0-r-in-hip empty 0 -8 0 10
 -228856 -1 -1 0 256;
 #N canvas 0 23 142 116 (subpatch) 0;
 #X obj 16 10 inlet;
@@ -95,9 +95,9 @@ empty -2 -8 0 10 -195568 -1 -1 0 1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 30 237 pd;
-#X obj 33 65 hsl 100 15 100 20000 0 0 \$0-s-in-lop \$0-r-in-lop empty
+#X obj 33 84 hsl 100 15 100 20000 0 0 \$0-s-in-lop \$0-r-in-lop empty
 -2 -8 0 10 -228856 -1 -1 0 1;
-#X obj 138 65 nbx 5 15 100 20000 0 0 empty \$0-r-in-lop empty 0 -8
+#X obj 138 84 nbx 5 15 100 20000 0 0 empty \$0-r-in-lop empty 0 -8
 0 10 -228856 -1 -1 100 256;
 #N canvas 0 23 142 116 (subpatch) 0;
 #X obj 16 10 inlet;
@@ -106,18 +106,18 @@ empty -2 -8 0 10 -195568 -1 -1 0 1;
 #X connect 0 0 1 0;
 #X connect 1 0 2 0;
 #X restore 30 258 pd;
-#X obj 195 142 tgl 15 0 \$0-s-link-osc-freq \$0-r-link-osc-freq empty
+#X obj 195 141 tgl 15 0 \$0-s-link-osc-freq \$0-r-link-osc-freq empty
 17 7 0 10 -191407 -1 -1 1 1;
 #X obj 196 217 loadbang;
 #X msg 196 238 1;
 #X text 202 6 In Volume;
-#X text 202 46 In Lo-Cut;
-#X text 202 65 In Hi-Cut;
-#X obj 216 123 hsl 100 15 0 3 0 0 \$0-s-r-write-speed \$0-r-r-write-speed
+#X text 202 65 In Lo-Cut;
+#X text 202 84 In Hi-Cut;
+#X obj 216 122 hsl 100 15 0 3 0 0 \$0-s-r-write-speed \$0-r-r-write-speed
 empty -2 -8 0 10 -191407 -1 -1 0 1;
-#X obj 321 123 nbx 5 15 0 3 0 0 empty \$0-r-r-write-speed empty 0 -8
+#X obj 321 122 nbx 5 15 0 3 0 0 empty \$0-r-r-write-speed empty 0 -8
 0 10 -191407 -1 -1 0 256;
-#X obj 195 123 tgl 15 0 \$0-s-link-write-speed \$0-r-link-write-speed
+#X obj 195 122 tgl 15 0 \$0-s-link-write-speed \$0-r-link-write-speed
 empty 17 7 0 10 -191407 -1 -1 1 1;
 #N canvas 0 23 142 116 (subpatch) 0;
 #X obj 16 10 inlet;
@@ -139,9 +139,9 @@ empty 17 7 0 10 -191407 -1 -1 1 1;
 #X connect 3 0 5 0;
 #X connect 4 0 3 1;
 #X restore 139 199 pd;
-#X text 189 107 Link;
-#X text 68 105 ______Left______;
-#X text 245 105 ______Right______;
+#X text 189 106 Link;
+#X text 68 104 ______Left______;
+#X text 245 104 ______Right______;
 #N canvas 117 76 843 811 fx-engine 0;
 #X obj 19 15 inlet~;
 #X obj 79 15 inlet~;
@@ -416,8 +416,8 @@ empty 17 7 0 10 -191407 -1 -1 1 1;
 #X obj 354 221 adc~ 1 2;
 #X obj 354 307 dac~ 1 2;
 #X text 440 265 <---;
-#X text 383 124 Write Speed;
-#X text 383 143 OSC Freq;
+#X text 383 123 Write Speed;
+#X text 383 142 OSC Freq;
 #X connect 1 0 15 0;
 #X connect 2 0 16 0;
 #X connect 4 0 17 0;

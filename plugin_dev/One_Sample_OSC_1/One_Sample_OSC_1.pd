@@ -207,9 +207,9 @@ USE OR OTHER DEALINGS IN THE SOFTWARE.;
 #X obj 33 27 hsl 100 15 0 20 0 0 \$0-s-in-gain \$0-r-in-gain empty
 -2 -8 0 10 -228856 -1 -1 0 1;
 #X text 202 26 In Gain;
-#X obj 33 84 hsl 100 15 0 1 0 0 \$0-s-dry-wet \$0-r-dry-wet empty -2
+#X obj 33 46 hsl 100 15 0 1 0 0 \$0-s-dry-wet \$0-r-dry-wet empty -2
 -8 0 10 -228856 -1 -1 0 1;
-#X text 202 84 Dry/Wet Mix;
+#X text 202 46 Dry/Wet Mix;
 #X obj 33 103 hsl 100 15 0 12 0 0 \$0-s-write-size \$0-r-write-size
 empty -2 -8 0 10 -191407 -1 -1 0 1;
 #X obj 33 142 hsl 100 15 0 20000 0 0 \$0-s-l-osc-freq \$0-r-l-osc-freq
@@ -220,7 +220,7 @@ empty -2 -8 0 10 -195568 -1 -1 0 1;
 -1 -1 0 256;
 #X obj 138 27 nbx 5 15 0 20 0 0 empty \$0-r-in-gain empty 0 -8 0 10
 -228856 -1 -1 0 256;
-#X obj 138 84 nbx 5 15 0 1 0 0 empty \$0-r-dry-wet empty 0 -8 0 10
+#X obj 138 46 nbx 5 15 0 1 0 0 empty \$0-r-dry-wet empty 0 -8 0 10
 -228856 -1 -1 0 256;
 #X obj 138 103 nbx 5 15 0 12 0 0 empty \$0-r-write-size empty 0 -8
 0 10 -191407 -1 -1 0 256;
@@ -298,9 +298,9 @@ empty -2 -8 0 10 -195568 -1 -1 0 1;
 #X obj 164 376 hip~;
 #X obj 121 397 hip~;
 #X obj 164 397 hip~;
-#X obj 33 46 hsl 100 15 0 5000 0 0 \$0-s-in-hip \$0-r-in-hip empty
+#X obj 33 65 hsl 100 15 0 5000 0 0 \$0-s-in-hip \$0-r-in-hip empty
 -2 -8 0 10 -228856 -1 -1 0 1;
-#X obj 138 46 nbx 5 15 0 5000 0 0 empty \$0-r-in-hip empty 0 -8 0 10
+#X obj 138 65 nbx 5 15 0 5000 0 0 empty \$0-r-in-hip empty 0 -8 0 10
 -228856 -1 -1 0 256;
 #N canvas 0 23 142 116 (subpatch) 0;
 #X obj 16 10 inlet;
@@ -315,9 +315,9 @@ empty -2 -8 0 10 -195568 -1 -1 0 1;
 #X obj 164 419 lop~;
 #X obj 164 440 lop~;
 #X obj 198 390 param.get 8;
-#X obj 33 65 hsl 100 15 100 20000 0 0 \$0-s-in-lop \$0-r-in-lop empty
+#X obj 33 84 hsl 100 15 100 20000 0 0 \$0-s-in-lop \$0-r-in-lop empty
 -2 -8 0 10 -228856 -1 -1 0 1;
-#X obj 138 65 nbx 5 15 100 20000 0 0 empty \$0-r-in-lop empty 0 -8
+#X obj 138 84 nbx 5 15 100 20000 0 0 empty \$0-r-in-lop empty 0 -8
 0 10 -228856 -1 -1 100 256;
 #N canvas 0 23 142 116 (subpatch) 0;
 #X obj 16 10 inlet;
@@ -332,8 +332,8 @@ empty -2 -8 0 10 -195568 -1 -1 0 1;
 #X msg 194 263 1;
 #X text 203 104 Write Block Size (Pow2 Samples);
 #X text 202 6 In Volume;
-#X text 202 46 In Lo-Cut;
-#X text 202 65 In Hi-Cut;
+#X text 202 65 In Lo-Cut;
+#X text 202 84 In Hi-Cut;
 #X text 383 142 OSC Freq;
 #X text 189 126 Link;
 #X text 68 124 ______Left______;
