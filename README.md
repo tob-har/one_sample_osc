@@ -7,7 +7,7 @@ Pure Data Abstractions and VST Plugins
 [Download the Release here.](https://github.com/tob-har/1_Sample_Processor/releases)<br>
 [Have a look/listen here](https://youtu.be/Gmqx0_3zaCM)<br>
 [... and here.](https://youtu.be/PEX9j8iqWEo)<br>
-[Talk about the project at ZKM next_generation 8.0(https://zkm.de/en/media/video/tobias-hartmann-000002083-seconds)]
+[Talk about the project at ZKM next_generation 8.0](https://zkm.de/en/media/video/tobias-hartmann-000002083-seconds)
 
 
 
