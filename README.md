@@ -1,5 +1,16 @@
 # One Sample OSC 1 and One Sample OSC 2
 
+
+**IMPORTANT for MAC users**
+Audio Unit runs on M1 machines. If you run into the prompt, that the plugin can't be opened because it is not from a verified developer just do this routine:
+- go to your plugins folder /Library/Audio/Plug-Ins/Components
+- right click the plugin or ctrl click the plugin
+- choose open with and select terminal
+- after the terminal appears open your Macs "system preferences", got to "security" and select "allow" for the plugin
+- close all windows and terminal
+
+After that procedure, the plugin works. Btw: This routine works for other software that is blocked as well.
+
 Version 0.2
 
 Pure Data Abstractions and VST3 and Audio Unit Plugins: 
